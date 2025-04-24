@@ -1,0 +1,123 @@
+/* Set the full height of the body and apply a radial gradient background */
+body {
+  height: 100vh;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 0%, skyblue 100%);
+}
+
+/* Center the logocontainer on the page using absolute positioning */
+#logocontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 650px;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+/* Position the CSS3 icon on the bottom-left part of the circle */
+#css3 {
+  margin: 0;
+  position: absolute;
+  top: 67%;
+  left: 20%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+/* Position the HTML5 icon on the middle-left */
+#html5 {
+  margin: 0;
+  position: absolute;
+  top: 37%;
+  left: 30%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+}
+
+/* Position the SASS icon at the top center */
+#sass {
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+}
+
+/* Position the JavaScript icon on the middle-right */
+#js {
+  margin: 0;
+  position: absolute;
+  top: 37%;
+  left: 70%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+}
+
+/* Position the PHP icon on the bottom-right */
+#php {
+  margin: 0;
+  position: absolute;
+  top: 67%;
+  left: 80%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+}
+
+/* Apply blinking animation to both retina parts */
+#Retina1,
+#Retina2 {
+  animation-name: blink;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+}
+
+/* Define the blinking animation keyframes */
+@keyframes blink {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  1% {
+    transform: scaleX(1.3) scaleY(0.1);
+  }
+  2% {
+    transform: scaleX(1) scaleY(1);
+  }
+  60% {
+    transform: scaleX(1) scaleY(1);
+  }
+  61% {
+    transform: scaleX(1.3) scaleY(0.1);
+  }
+  62% {
+    transform: scaleX(1) scaleY(1);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+/* Style and position the sanky image below the other elements with lower z-index */
+#sanky {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+
+/* Style and position the retina SVG in the center, behind the icons */
+#retina {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -4;
+}
