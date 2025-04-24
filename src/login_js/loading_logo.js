@@ -1,12 +1,14 @@
 // Create a new GSAP timeline for animations
 var tl = new TimelineLite();
 
-// Animate each element with the class "topics" by scaling them from 0 to full size
-// while bringing them into position with a bounce effect (Elastic ease)
 tl.staggerFrom(".topics", 3, {
-  css: { transform: "scale(0)", top: "60%", left: "50%" },
+  css: {
+    transform: "scale(0)",
+    top: "50%",
+    left: "50%"
+  },
   ease: Elastic.easeOut
-}, 0.3); // 0.3 seconds between each animation start
+}, 0.3);
 
 // Grab references to each religious icon element by ID
 var js = document.getElementById("js");
@@ -62,3 +64,18 @@ for (var i = 0; i < topics.length; i++) {
 function retinaout(event) {
   TweenMax.to("#retina", 0.2, { left: "50%", top: "60%" });
 }
+// Utility to trigger animation
+function triggerPuffAnimation(button) {
+  button.classList.remove("animate-puff"); // reset if already active
+  void button.offsetWidth; // force reflow
+  button.classList.add("animate-puff");
+}
+
+// Add animation to buttons
+document.querySelector(".login").addEventListener("click", function (e) {
+  triggerPuffAnimation(this);
+});
+
+document.querySelector(".create-account").addEventListener("click", function (e) {
+  triggerPuffAnimation(this);
+});

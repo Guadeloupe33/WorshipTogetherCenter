@@ -1,27 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="welcome">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/loging.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worship Together Center</title>
+  <link rel="stylesheet" href="./src/loging_css/loging.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
-<body>
-    <div class="content">
-      <div class="flex-div">
-        <div class="name-content">
-          <h1 class="logo">WORSHIP TOGETHER CENTER</h1>
-          <p>Discover, share, and grow with believers around the world.</p>
-        </div>
-          <form>
-            <input type="text" placeholder="Email or Phone Number" required />
-            <input type="password" placeholder="Password" required>
-            <button class="login">Log In</button>
-            <a href="#">Forgot Password ?</a>
-            <hr>
-            <button class="create-account">Create New Account</button>
-          </form>
+<body class="welcome">
+
+
+
+  <!-- 🏷️ Top-Left Branding -->
+  <div class="branding">
+    <img class="logo" src="./images/loging_images/resized_mai_logo.svg" alt="Worship Together Center Logo" />
+    <p class="tagline">Discover, share, and grow with believers around the world.</p>
+  </div>
+
+  <!-- 📦 Centered Layout Container -->
+  <div class="content">
+
+    <!-- 🌀 Animated Religious Logo -->
+    <div id="logo">
+      <div id="logocontainer">
+        <img class="topics" id="css3" src="./images/loging_images/jewish.svg" />
+        <img class="topics" id="html5" src="./images/loging_images/hinduhism.svg" />
+        <img class="topics" id="sass" src="./images/loging_images/cross.svg" />
+        <img class="topics" id="js" src="./images/loging_images/budhaism.svg" />
+        <img class="topics" id="php" src="./images/loging_images/muslim.svg" />
+
+        <!-- 👁️ Retina Animation -->
+        <svg id="retina" viewBox="0 0 500 500">
+          <path id="Retina2" d="M222,186.3l-5.1,4.9l2.1-6.7..." />
+          <path id="Retina1" d="M281.6,186.3l-5.1,4.9l2.1-6.7..." />
+        </svg>
+
+        <img id="sanky" src="./images/loging_images/black_guy.svg" />
       </div>
     </div>
-  </body>
+
+    <!-- 🔐 Login Form -->
+    <form>
+      <input type="text" placeholder="Email or Phone Number" required />
+      <input type="password" placeholder="Password" required />
+      <button class="login">Log In</button>
+      <a href="#">Forgot Password?</a>
+      <hr />
+      <button class="create-account">Create New Account</button>
+    </form>
+
+  </div>
+
+  <!-- 🎬 Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="./src/login_js/loading_logo.js"></script>
+
+</body>
 </html>
