@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loading_logo</title>
-    <link rel="stylesheet" href="./src/loading_logo.css">
+  <!-- Character encoding set to UTF-8 for universal character support -->
+  <meta charset="UTF-8">
+  
+  <!-- Viewport settings for responsive design on mobile and desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title shown in the browser tab -->
+  <title></title>
+  
+  <!-- Link to the external CSS file that styles the animation and layout -->
+  <link rel="stylesheet" href="./src/loading_logo.css">
 </head>
 <body>
-    
+  <!-- Container for the entire logo and animated elements -->
+  <div id="logo">
+    <div id="logocontainer">
+      
+      <!-- Religious symbols positioned around a circle, animated with JS -->
+      <img class="topics" id="css3" src="./images/loging_images/jewish.svg">
+      <img class="topics" id="html5" src="./images/loging_images/hinduhism.svg">
+      <img class="topics" id="sass" src="./images/loging_images/cross.svg">
+      <img class="topics" id="js" src="./images/loging_images/budhaism.svg">
+      <img class="topics" id="php" src="./images/loging_images/muslim.svg">
 
+      <!-- SVG that includes two blinking "retina" eyes for interaction animation -->
+      <svg id="retina" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+        <path id="Retina2" class="st9" d="M222,186.3l-5.1,4.9l2.1-6.7c-0.7-0.2-1.3-0.3-2.1-0.3c-3.9,0-7.1,3.2-7.1,7.1
+          c0,3.9,3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1C224,189.2,223.3,187.5,222,186.3z"/>
+        <path id="Retina1" class="st9" d="M281.6,186.3l-5.1,4.9l2.1-6.7c-0.7-0.2-1.3-0.3-2.1-0.3c-3.9,0-7.1,3.2-7.1,7.1
+          c0,3.9,3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1C283.5,189.2,282.8,187.5,281.6,186.3z"/>
+      </svg>
 
-    <div id="logo">
-        <div id="logocontainer">
-            <img class="topics" id="css3" src="./images/logo_images/main_logo_updated.svg">
-            <img class="topics" id="html5" src="//inf3cti0n95.github.io/img/html5.svg">
-            <img class="topics" id="sass" src="//inf3cti0n95.github.io/img/sass.svg">
-            <img class="topics" id="js" src="//inf3cti0n95.github.io/img/js.svg">
-            <img class="topics" id="php" src="//inf3cti0n95.github.io/img/php.svg">
-            <svg id="retina" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-                <path id="Retina2" class="st9" d="M222,186.3l-5.1,4.9l2.1-6.7c-0.7-0.2-1.3-0.3-2.1-0.3c-3.9,0-7.1,3.2-7.1,7.1
-                c0,3.9,3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1C224,189.2,223.3,187.5,222,186.3z"/>
-                <path id="Retina1" class="st9" d="M281.6,186.3l-5.1,4.9l2.1-6.7c-0.7-0.2-1.3-0.3-2.1-0.3c-3.9,0-7.1,3.2-7.1,7.1
-                c0,3.9,3.2,7.1,7.1,7.1c3.9,0,7.1-3.2,7.1-7.1C283.5,189.2,282.8,187.5,281.6,186.3z"/>
-            </svg>
-            <img id="sanky" src="//inf3cti0n95.github.io/img/sanky.svg">
-        </div>
+      <!-- Decorative or symbolic figure, possibly part of center identity -->
+      <img id="sanky" src="./images/loging_images/black_guy.svg">
     </div>
-    <script src="./src/loading_logo.js"></script>
-</body>
+  </div>
 
+  <!-- GSAP libraries for animation (TweenMax + TimelineLite) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  
+  <!-- Custom JS file where all animation and interactivity is defined -->
+  <script src="./src/loading_logo.js"></script>
+</body>
 </html>
