@@ -72,10 +72,21 @@ function triggerPuffAnimation(button) {
 }
 
 // Add animation to buttons
-document.querySelector(".login").addEventListener("click", function (e) {
-  triggerPuffAnimation(this);
-});
+document.addEventListener("DOMContentLoaded", function () {
+  // Now the DOM is loaded, safe to query elements
 
-document.querySelector(".create-account").addEventListener("click", function (e) {
-  triggerPuffAnimation(this);
+  const loginButton = document.querySelector(".login");
+  const createAccountButton = document.querySelector(".create-account");
+
+  if (loginButton) {
+    loginButton.addEventListener("click", function (e) {
+      triggerPuffAnimation(this);
+    });
+  }
+
+  if (createAccountButton) {
+    createAccountButton.addEventListener("click", function (e) {
+      triggerPuffAnimation(this);
+    });
+  }
 });
