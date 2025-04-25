@@ -8,245 +8,188 @@
     <link rel="stylesheet" href="./src/loging_css/sign_up.css">
 </head>
 <body>
+<!-- Top Bar -->
+<div class="row bg-fb-blue pt-5">
+    <div class="container">
+      <div class="row no-gutters pl-2 pr-2">
+        <div class="col-sm-12 col-md-6">
+          <img class="logo" src="./images/loging_images/updatedLogo.svg" alt="Worship Together Center Logo" />
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <form class="float-right">
+            <div class="form-row">
+              <div class="col-auto">
+                <input type="text" class="form-control form-control-sm mb-2" id="emailPhone" placeholder="Email or Phone">
+              </div>
+              <div class="col-auto">
+                <input type="password" class="form-control form-control-sm mb-2" id="password" placeholder="Password">
+              </div>
+              <div class="col-auto">
+                <input type="submit" id="submit" class="btn btn-sm btn-fb mb-2 align-bottom" value="Log In">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="row bg-fb-blue pt-5">
-        <div class="container">
-          <div class="row no-gutters pl-2 pr-2">
-            <div class="col-sm-12 col-md-6">
-                <img class="logo" src="./images/loging_images/updatedLogo.svg" alt="Worship Together Center Logo" />
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <form class="float-right">
-                <div class="form-row">
-                  <div class="col-auto">
-                    <label class="sr-only" for="emailPhone">Email or Phone</label>
-                    <input type="text" class="form-control form-control-sm mb-2" id="emailPhone" placeholder="Email or Phone">
-                  </div>
-                  <div class="col-auto">
-                    <label class="sr-only" for="password">Password</label>
-                    <div class="input-group mb-2">
-                      <input type="text" class="form-control form-control-sm" id="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <input type="submit" id="submit" class="btn btn-sm btn-fb mb-2 align-bottom" value="Log In">
-                  </div>
+  <!-- Main Section -->
+  <div style="background-color: #edf0f5;">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-sm-12 col-md-6 mt-5 pr-5">
+          <h2>Discover, share, and grow <br> with believers around the world.</h2>
+          <ul class="list-group">
+            <li class="list-group-item bg-transparent border-0 pl-0">
+              <i class="far fa-newspaper fa-3x align-middle"></i>
+              <span class="ml-2"><strong>See messages of hope and inspiration</strong> shared by believers.</span>
+            </li>
+            <li class="list-group-item bg-transparent border-0 pl-0">
+              <i class="far fa-star fa-3x align-middle"></i>
+              <span class="ml-2"><strong>Share your blessings</strong> and life updates with your faith community.</span>
+            </li>
+            <li class="list-group-item bg-transparent border-0 pl-0">
+              <i class="fas fa-hands-helping fa-3x align-middle"></i>
+              <span class="ml-2"><strong>Find encouragement and fellowship</strong> to grow your faith journey.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-12 col-md-6 mt-3">
+          <h1 class="text-center">Sign Up</h1>
+
+          <!-- Personal/Organization Buttons -->
+          <div class="d-flex justify-content-center">
+            <button type="button" id="personalBtn" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3 mr-4 equal-button">Personal</button>
+            <button type="button" id="organizationBtn" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3 equal-button">Organization</button>
+          </div>
+
+          <!-- Personal Form -->
+          <div id="personalForm" style="display: none;">
+            <h6 class="text-center">It's free and always will be.</h6>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="First Name">
                 </div>
-              </form>
-            </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Mobile number or email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="New password">
+              </div>
+              <h5 class="fb-light-blue">Birthday</h5>
+              <div class="form-row mb-3">
+                <div class="col-auto pl-0 pr-0">
+                  <select class="custom-select my-1">
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <!-- Add all months -->
+                  </select>
+                </div>
+                <div class="col-auto pl-0 pr-0">
+                  <select class="custom-select my-1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <!-- Add all days -->
+                  </select>
+                </div>
+                <div class="col-auto pl-0 pr-0">
+                  <select class="custom-select my-1">
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <!-- Add all years -->
+                  </select>
+                </div>
+              </div>
+
+              <h5 class="fb-light-blue">Gender</h5>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="femaleRadio" name="genderRadio" class="custom-control-input">
+                <label class="custom-control-label" for="femaleRadio">Female</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="maleRadio" name="genderRadio" class="custom-control-input">
+                <label class="custom-control-label" for="maleRadio">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadio" name="genderRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio">Custom</label>
+              </div>
+
+              <h5 class="fb-light-blue">Religious Affiliation</h5>
+
+              <div class="d-flex justify-content-center mt-3">
+                <button type="submit" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3">Sign Up</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Organization Form -->
+          <div id="organizationForm" style="display: none;">
+            <h6 class="text-center">Set up your organization's profile</h6>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Organization Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Organization Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Website (optional)">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder="Organization Description"></textarea>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3">Sign Up</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid bg-white pl-0 pr-0">
+    <footer class="p-2">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-sm-12">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">English (US)</a></li>
+              <li class="list-inline-item"><a href="#">Sign Up</a></li>
+              <li class="list-inline-item"><a href="#">Log In</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Developers</a></li>
+              <li class="list-inline-item"><a href="#">Careers</a></li>
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Cookies</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Help</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div style="background-color: #edf0f5;">
-        <div class="container">
-          <div class="row no-gutters">
-            <div class="col-sm-12 col-md-6 mt-5 pr-5 bold">
-              <h2>Discover, share, and grow <br> with believers around the world.</h2>
-              <ul class="list-group">
-                <li class="list-group-item bg-transparent border-0 pl-0">
-                  <i class="far fa-newspaper fa-3x align-middle"></i>
-                  <span class="ml-2"><span class="ml-2"><strong>See messages of hope and inspiration</strong> shared by believers.</span>
-                </li>
-                <li class="list-group-item bg-transparent border-0 pl-0">
-                  <i class="far fa-star fa-3x align-middle"></i>
-                  <span class="ml-2"><span class="ml-2"><strong>Share your blessings</strong> and life updates with your faith community.</span>
-                </li>
-                <li class="list-group-item bg-transparent border-0 pl-0">
-                    <i class="fas fa-hands-helping fa-3x align-middle"></i>
-                  <span class="ml-2"><strong>Find encouragement and fellowship</strong> to grow your faith journey.</span>
+    </footer>
+  </div>
 
-                </li>          
-              </ul>
-            </div>
-            <div class="col-sm-12 col-md-6 mt-3">
-                <h1 class="text-center">Sign Up</h1>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3 mr-4 equal-button">Personal</button>
-                <button type="submit" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3 equal-button">Organization</button>
-              </div>
-              
-              
-              
-              <h6 class="text-center"></h6class>It's free and always will be.</h6>
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="fname" placeholder="First Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="lname" placeholder="Last Name">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="phoneEmail" placeholder="Mobile number or email">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" placeholder="New password">
-                </div>
-                <h5 class="fb-light-blue">Birthday</h3>
-                <div class="form-row mb-3">
-                  <div class="col-auto pl-0 pr-0">
-                    <select class="custom-select my-1" id="inlineFormCustomSelectPref">
-                      <option value="1">Jan</option>
-                      <option value="2">Feb</option>
-                      <option value="3">Mar</option>
-                      <option value="4">Apr</option>
-                      <option value="5">May</option>
-                      <option value="6">Jun</option>
-                      <option value="7" selected>Jul</option>
-                      <option value="8">Aug</option>
-                      <option value="9">Sep</option>
-                      <option value="10">Oct</option>
-                      <option value="11">Nov</option>
-                      <option value="12">Dec</option>
-                    </select>
-                  </div>
-                  <div class="col-auto pl-0 pr-0">
-                    <select class="custom-select my-1" id="inlineFormCustomSelectPref">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6" selected>6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                      <option value="24">24</option>
-                      <option value="25">25</option>
-                      <option value="26">26</option>
-                      <option value="27">27</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
-                    </select>
-                  </div>
-                  <div class="col-auto pl-0 pr-0">
-                    <select class="custom-select my-1" id="inlineFormCustomSelectPref">
-                      <option value="1985">1985</option>
-                      <option value="1986">1986</option>
-                      <option value="1987">1987</option>
-                      <option value="1988">1988</option>
-                      <option value="1989">1989</option>
-                      <option value="1990">1990</option>
-                      <option value="1991">1991</option>
-                      <option value="1992">1992</option>
-                      <option value="1993">1993</option>
-                      <option value="1994" selected>1994</option>
-                    </select>
-                  </div>  
-                  <div class="col-auto pl-1">
-                    <i class="fas fa-question-circle popover-icon" tabindex="0" data-popover-content="#bdaySelect" id="showPopover" data-toggle="popover" data-html="true" data-placement="left"></i>
-                    <div class="popover-block-container">
-                      <div id="bdaySelect" style="display:none;">
-                        <div class="popover-body">
-                          <strong>Providing your birthday</strong> helps make sure you get the right Facebook experience for your age. If you want to change who sees this, go to the About section of your profile. For more details, please visit our <a href="https://www.facebook.com/privacy/explanation/" target="_blank" rel="noopener">Data Policy</a>.
-                          <hr>
-                          <span class="float-right mb-2">
-                            <a href="#" class="btn btn-sm btn-fb align-right">Close</a>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-auto pl-0">
-                  <h5 class="fb-light-blue">Gender</h3>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="femaleRadio" name="genderRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="femaleRadio">Female</label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="maleRadio" name="genderRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="maleRadio">Male</label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadio" name="genderRadio" oninput="on_change(event)" class="custom-control-input" value="customSelect">
-                    <label class="custom-control-label" for="customRadio">Custom</label>
-                  </div>
-                  <div class="custom-control custom-control-inline pl-0">
-                    <i class="fas fa-question-circle popover-icon" tabindex="0" data-popover-content="#genderSelect" id="showPopover" data-toggle="popover" data-html="true" data-placement="left"></i>
-                    <div class="popover-block-container">
-                      <div id="genderSelect" style="display:none;">
-                        <div class="popover-body">
-                          You can change who sees your gender on your profile later. Select Custom to choose another gender, or if you'd rather not say.
-                          <hr>
-                          <span class="float-right mb-2">
-                            <a href="#" class="btn btn-sm btn-fb align-right">Close</a>
-                          </span>
-                        </div>
-                      </div>
-                    </div>             
-                  </div>
-                  <div id="text" style="display:none;">
-                    <select class="custom-select my-1" id="inlineFormCustomSelectPref">
-                      <option value="1" selected>Select your pronoun</option>
-                      <option value="2">She: "Wish her a happy birthday!"</option>
-                      <option value="3">He: "Wish him a happy birthday!"</option>
-                      <option value="4">They: "Wish them a happy birthday!"</option>
-                    </select>
-                    <small class="text-muted">Your pronoun is visible to everyone.</small>
-                    <input class="form-control" placeholder="Gender (optional)">
-                  </div>
-                  <h5 class="fb-light-blue">Religious affiliation</h3>
-                  <small class="text-muted d-block mb-3">By clicking Sign Up, you agree to our <a href="https://www.facebook.com/legal/terms/update" target="_blank">Terms</a>, <a href="https://www.facebook.com/about/privacy/update" target="_blank">Data Policy</a> and <a href="https://www.facebook.com/policies/cookies/" target="_blank">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</small>
-                </div>   
-                  <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-md btn-fb-submit pl-5 pr-5 mb-3">Sign Up</button>
-                  </div>
-            </form>
-              <hr>
-              <p class="font-weight-bold"><a href="#">Create an Page</a> organization page.</p>
-            </div> 
-          </div>    
-        </div> <!-- End Container -->
-      </div>
-      <div class="container-fluid bg-white pl-0 pr-0">
-        <footer class="p-2">
-          <div class="container">
-            <div class="row no-gutters">
-              <div class="col-sm-12">
-                <ul class="list-inline">
-                     
-                </ul>
-                <hr>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a href="#">English (US)</a></li>
-                  <li class="list-inline-item"><a href="#">Sign Up</a></li>
-                  <li class="list-inline-item"><a href="#">Log In</a></li>
-                  <li class="list-inline-item"><a href="#">About</a></li>
-                  <li class="list-inline-item"><a href="#">Developers</a></li>
-                  <li class="list-inline-item"><a href="#">Careers</a></li>
-                  <li class="list-inline-item"><a href="#">Privacy</a></li>
-                  <li class="list-inline-item"><a href="#">Cookies</a></li>
-                  <li class="list-inline-item"><a href="#">Terms</a></li>
-                  <li class="list-inline-item"><a href="#">Account Security</a></li>
-                  <li class="list-inline-item"><a href="#">Login Help</a></li>      
-                  <li class="list-inline-item"><a href="#">Help</a></li>
-                </ul>            
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-      <script src="./src/login_js/sign_up.js"> </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
-      <script src="./src/login_js/loading_logo.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- (NEW) jQuery must be loaded first -->
+<script src="./src/login_js/sign_up.js"></script> <!-- Your custom sign up code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 </body>
 </html>

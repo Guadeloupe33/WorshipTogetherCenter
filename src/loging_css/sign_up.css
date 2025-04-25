@@ -68,3 +68,18 @@ footer {
   }
   
   
+/* Sticky footer fix */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-fluid.bg-white {
+    margin-top: auto;
+  }
+  
