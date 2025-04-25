@@ -57,3 +57,47 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+const religionDropdown = document.getElementById('religion');
+const denominationGroup = document.getElementById('denomination-group');
+const denominationDropdown = document.getElementById('denomination');
+
+// Map of religions to denominations/branches
+const religionOptions = {
+  christian: ['Baptist', 'Pentecostal', 'Catholic', 'Methodist', 'Non-Denominational', 'Other'],
+  muslim: ['Sunni', 'Shia', 'Sufi', 'Other'],
+  jewish: ['Orthodox', 'Conservative', 'Reform', 'Reconstructionist', 'Other'],
+  hindu: ['Vaishnavism', 'Shaivism', 'Shaktism', 'Smartism', 'Other'],
+  buddhist: ['Theravada', 'Mahayana', 'Vajrayana', 'Zen', 'Other'],
+  sikh: ['Khalsa', 'Nanakpanthi', 'Other'],
+  spiritual: ['Meditation-based', 'Universalist', 'Energy Healing', 'Other'],
+  other: ['Other']
+};
+
+if (religionDropdown) {
+  religionDropdown.addEventListener('change', function () {
+    const selectedReligion = this.value;
+    const branches = religionOptions[selectedReligion];
+
+    if (branches) {
+      denominationDropdown.innerHTML = '<option value="">-- Select Option --</option>';
+      branches.forEach(branch => {
+        const option = document.createElement('option');
+        option.value = branch.toLowerCase().replace(/\s/g, '-');
+        option.textContent = branch;
+        denominationDropdown.appendChild(option);
+      });
+      denominationGroup.style.display = 'block';
+    } else {
+      denominationGroup.style.display = 'none';
+    }
+  });
+}
+document.querySelector("#personalForm form")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // Do form validation / backend call if needed
+
+  // Redirect to homepage
+  window.location.href = "homepage.html"; // change to your actual homepage filename
+});
+
+
