@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
   
   // Activate popovers (for birthday and gender info)
-  $("[data-toggle=popover]").popover({
-    html: true,
-    trigger: 'focus',
-    content: function() {
-      const content = $(this).attr("data-popover-content");
-      return $(content).children(".popover-body").html();
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl);
+    });
   });
+  
+
+
+
+
+
 
   // Show additional fields if "Custom" gender selected
   function on_change(event) {
